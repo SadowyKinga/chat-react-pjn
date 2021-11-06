@@ -1,13 +1,136 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: var(--font-family),sans-serif!important;
+  height: 100%;
+  background-color: transparent;
+}
+
+:root {
+  --primary: #14286e;
+  --white: #fff;
+  --gray: #cdcdcd;
+  --user: #969595;
+  --font-family: MuseoSans-Regular;
+}
+
+.ant-list-item-meta {
+  align-items: flex-end;
+}
+
+.ant-list-item-meta-content {
+  max-width: 500px;
+  overflow-x: scroll;
+}
+
+.ant-list-item-meta-title {
+  font-size: 20px !important;
+}
+
+.ant-list-item-meta-description {
+  display: flex;
+  color: var(--white)!important;
+}
+
+.ant-card-cover > img {
+  height: 100px!important;
+}
+
+.ant-list-item-meta-content {
+  overflow-x: auto!important;
+}
+
+.ant-card-body {
+  padding: 0!important 
+}
+
+.ant-card-actions > li > span a:not(.ant-btn):hover, .ant-card-actions > li > span > .anticon:hover {
+  color: var(--primary)!important;
+}
+
+h4.ant-list-item-meta-title {
+  color: var(--white)!important;
+}
+
+h4.MuiTypography-root.MuiTypography-h4 {
+  color: white;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color:var(--primary)!important;
+}
+
+.MuiInput-underline:after{
+  border-bottom: 2px solid var(--primary)!important;
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'MuseoSans-Regular';
+  src: url('./styles/assets/context/MuseoSans-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'MuseoSans-Regular';
+  src: url('./styles/assets/context/MuseoSans-Bold.ttf');
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 520px) {
+  body {
+    height: 100%;
+  }
+}
+
+/*scroll*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(224, 224, 224); 
+  border-radius: 10px;
+  background: var(--white); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray); 
+  border-radius: 10px;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  background: var(--gray); 
+  border-radius: 10px;
+}
+
+label.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated {
+  font-size: small;
+}
+
+input.MuiInputBase-input.MuiInput-input{
+  font-size: medium;
+}
+
+input.admission-info-button {
+  background-color: white;
+}
+input.admission-info-button:hover {
+  background-color:white;
+}
+
+.ant-list-item-meta-description{
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 576px) {
+  .ant-list-item {
+    flex-wrap: nowrap!important;
+  }
 }
